@@ -1,0 +1,157 @@
+body {
+    background-color:#ffeabf8f;
+   }
+   
+  p{
+      background-color:#ff15a8;
+  }
+  
+          .profile-pic {
+    /* 1. Control the size (adjust numbers as you like) */
+    width: 200px;
+    height: 200px;
+    
+    /* 2. Keeps the image inside crisp without stretching */
+    object-fit: cover;
+    
+    /* 3. Makes it a perfect circle (or 20px for rounded square) */
+    border-radius: 50%;
+    
+    /* 4. Centers the photo horizontally with breathing room */
+    display: block;
+    margin: 20px auto;
+    
+    /* 5. Optional: Add a glowing neon ring to match the blue/red light */
+    border: 3px solid #00d2ff;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.6);
+}
+ video{
+     border-radious:5px;
+     box-shadow:0 5px 15px aqua;
+     border:2px solid green;
+     position:relative;
+ }
+  .my-video1{
+      top:25px;
+      right:0px;
+  }
+  /* navigation */
+     .navbar {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    gap:15px;
+    width:285px;
+    padding: 15px 25px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius:15px;
+    border:2px solid blue;
+    box-shadow:5px 0px 5px aqua;
+    position:relative;
+    backdrop-filter:blur(10px);
+}
+
+     .navbar h2 {
+    color: green;
+}
+
+.nav-links {
+  flex-direction:row;
+    display:flex;
+    gap:30px;
+    font-size:15px;
+}
+
+.nav-links a {
+    color: blue;
+    text-decoration: none;
+    transition:0.3s;
+}
+
+    .nav-links a:hover{
+             color:cyan;
+             text-shadow:0 0 10px cyan; 
+             transform:translateY(5px); 
+    }
+         @media(max-width:800px){
+             .navbar{
+                 flex-direction:column;
+                 width:100%;
+             }
+             .navbar h2{
+                 font-size:24px;
+             }
+             .nav-links{
+                 flex-direction:colomn;
+                 gap:20px;
+                 font-size:16px;
+             }
+         }
+         
+       .navbar{
+           position:absolute; 
+           top:780px;
+           left:-10px;
+       }
+     .indicator {
+    background-color: aqua;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    color: black;
+    display: inline-block;
+}
+       /* 1. The wrapper must be relative so the pill moves inside it */
+.nav-links {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* 2. Text sits on top (z-index: 2) */
+.nav-links a {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    font-size: 14px;
+    transition: color 0.25s ease;
+}
+
+/* Turns text dark when the bright aqua pill slides underneath */
+.nav-links a:hover {
+    color: #0d061a;
+}
+
+/* 3. The sliding background indicator */
+.indicator {
+    position: absolute;       /* Pulls it behind the links */
+    top: 0;
+    left: 0;
+    width: 82px;
+    height: 100%;
+    background-color: aqua;
+    border-radius: 20px;
+    z-index: 1;               /* Underneath link text */
+    pointer-events: none;     /* Clicks pass through to the links */
+    box-shadow: 0 0 15px aqua;
+    transition: transform 0.3s ease, width 0.3s ease; /* Smooth glide */
+}
+
+/* 4. Slide under whichever link is hovered */
+.nav-links:has(a:nth-child(1):hover) .indicator {
+    transform: translateX(0px);
+    width: 82px;
+}
+
+.nav-links:has(a:nth-child(2):hover) .indicator {
+    transform: translateX(90px);
+    width: 96px;
+}
+
+.nav-links:has(a:nth-child(3):hover) .indicator {
+    transform: translateX(190px);
+    width: 86px;
+}

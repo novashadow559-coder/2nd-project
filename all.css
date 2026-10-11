@@ -1,0 +1,23 @@
+body{
+    background:lightblue;
+}
+img{
+   max-width:100%;
+   width:280px;
+   height:180px;
+   object-fit:cover;
+   border-radius:15px;
+   margin:10px;
+   desplay-flex:center;
+   flex-direction:colomn;
+}
+/* Responsive Image */
+img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 16px;
+    display: block;
+    margin: 15px auto;
+}
+

@@ -1,0 +1,127 @@
+body{
+    background-image:url('photo.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:100vh;
+    margin:0;
+    color:white;
+    font-family:sans-serif;
+}
+h1{
+    position:relative;
+    color:aqua;
+}
+h1{
+    position:absolute;
+    top:-1px;
+    left:20px;
+}
+
+p{
+   color:green;
+}
+/* card area */
+ .card{
+     width:70%;
+     max-width:380px;
+     padding:50px 20px;
+     margin:1pxauto;
+     border:2px solid red;
+     border-radius:10px; 
+     box-shadow:0px 5px 5px 5px blue;
+     background:rgba(0,0,0,0.6);
+     backdrop-filter:blur(10px);
+     taxt-align:center;
+     postion:relative; 
+       }
+    .card{
+        position:absolute;
+        top:290px;
+        right:40px;
+    }
+        /* button area */
+button {
+    background-color:lightblue;
+    color:green; 
+    padding: 20px 40px;
+    border-radius: 20px;
+    border: none;
+    margin: 5px;
+    background-position:center;
+    text-align:center;
+    position:relative;
+    }
+    button{
+        position:absolute;
+        top:143px;
+        right:54px;
+    }
+
+/* 2. Button Base Style */
+button {
+    background-color: aqua;
+    color: green;
+    padding: 14px 28px;
+    border-radius: 20px;
+    border: none;
+    margin: 15px auto;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease; /* Makes transitions smooth */
+}
+
+/* 3. Button Hover Animation (Clean syntax!) */
+button:hover {
+    background-color: #00e5ff;
+    color: #ffffff;
+    transform: scale(1.05) translateY(-3px); /* Lifts up slightly */
+    animation: flicker 0.8s infinite alternate; /* Loops the flicker keyframe */
+}
+
+/* 4. Click Feedback */
+button:active {
+    transform: scale(0.95);
+}
+
+/* 5. Keyframes for the Neon Flicker Effect */
+@keyframes flicker {
+    0% {
+        box-shadow: 0 0 10px cyan;
+        text-shadow: 0 0 5px cyan;
+    }
+    100% {
+        box-shadow: 0 0 25px cyan, 0 0 45px #00d2ff;
+        text-shadow: 0 0 12px white;
+    }
+}button:hover {
+    background: purple;
+    transform: scale(1.08) translateY(-5px);
+    box-shadow: 0 5px 15px gray;
+}
+
+button:active {
+    transform: scale(0.88);
+}
+            .profile-pic {
+    /* 1. Control the size (adjust numbers as you like) */
+    width: 200px;
+    height: 200px;
+    
+    /* 2. Keeps the image inside crisp without stretching */
+    object-fit: cover;
+    
+    /* 3. Makes it a perfect circle (or 20px for rounded square) */
+    border-radius: 50%;
+    
+    /* 4. Centers the photo horizontally with breathing room */
+    display: block;
+    margin: 20px auto;
+    
+    /* 5. Optional: Add a glowing neon ring to match the blue/red light */
+    border: 3px solid #00d2ff;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.6);
+}
+ 
